@@ -357,14 +357,23 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
-            style "main_menu_vbox"
+            xalign 0.50
+            yalign 0.07
+            spacing 10
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            add "gui/sfls.png":
+                xalign 0.5
+                zoom 0.52
+
+            text "我挚爱的时光":
+                xalign 0.5
+                size 36
+                color "#238B45"
 
             text "[config.version]":
                 style "main_menu_version"
-
+                xalign 0.5
+                size 20
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
