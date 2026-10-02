@@ -132,7 +132,7 @@ default preferences.afm_time = 15
 ##
 ## 该语句通常不应变更，若要变更，应为有效字符串而不是表达式。
 
-define config.save_directory = "SFLS_Beloved_Days-1789560670"
+define config.save_directory = "SFLS_Beloved_Days-new"
 
 
 ## 图标 ##########################################################################

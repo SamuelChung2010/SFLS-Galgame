@@ -230,24 +230,59 @@ style choice_button_text is default:
 
 screen quick_menu():
 
-    ## 确保该菜单出现在其他屏幕之上，
     zorder 100
 
     if quick_menu:
 
         hbox:
-            style_prefix "quick"
             style "quick_menu"
+            style_prefix "quick"
+            spacing 4
 
-            textbutton _("回退") action Rollback()
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("设置") action ShowMenu('preferences')
+            textbutton _("回退") action Rollback() style "quick_button"
 
+            imagebutton:
+                idle Transform("gui/under/Under_Backlog_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Backlog_1.png", xysize=(108, 62), fit="contain")
+                action ShowMenu("history")
+
+            imagebutton:
+                idle Transform("gui/under/Under_Skip_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Skip_1.png", xysize=(108, 62), fit="contain")
+                action Skip()
+                alternate Skip(fast=True, confirm=True)
+
+            imagebutton:
+                idle Transform("gui/under/Under_Save_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Save_1.png", xysize=(108, 62), fit="contain")
+                action ShowMenu("save")
+
+            imagebutton:
+                idle Transform("gui/under/Under_QuickSave_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_QuickSave_1.png", xysize=(108, 62), fit="contain")
+                action QuickSave()
+
+            imagebutton:
+                idle Transform("gui/under/Under_QuickLoad_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_QuickLoad_1.png", xysize=(108, 62), fit="contain")
+                action QuickLoad()
+
+            imagebutton:
+                idle Transform("gui/under/Under_Load_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Load_1.png", xysize=(108, 62), fit="contain")
+                action ShowMenu("load")
+
+            imagebutton:
+                idle Transform("gui/under/Under_Config_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Config_1.png", xysize=(108, 62), fit="contain")
+                action ShowMenu("preferences")
+
+            imagebutton:
+                idle Transform("gui/under/Under_Title_0.png", xysize=(108, 62), fit="contain")
+                hover Transform("gui/under/Under_Title_1.png", xysize=(108, 62), fit="contain")
+                action MainMenu()
+
+            textbutton _("自动") action Preference("auto-forward", "toggle") style "quick_button"
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 屏幕。
 init python:
@@ -334,6 +369,72 @@ style navigation_button_text:
     properties gui.text_properties("navigation_button")
 
 
+## 标题菜单使用独立导航，游戏内菜单仍沿用 navigation。
+screen title_navigation():
+
+    vbox:
+        style_prefix "title_navigation"
+        xpos 0
+        ypos 448
+        spacing 9
+
+        textbutton _("开始游戏") action Start()
+        textbutton _("继续游戏") action Continue()
+        textbutton _("读取游戏") action ShowMenu("load")
+        textbutton _("设置") action ShowMenu("preferences")
+
+        if renpy.variant("pc"):
+            textbutton _("结束游戏") action Quit(confirm=False)
+
+    hbox:
+        xpos 66
+        ypos 950
+        spacing 24
+        textbutton _("关于") action ShowMenu("about") style "title_secondary_button"
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            textbutton _("帮助") action ShowMenu("help") style "title_secondary_button"
+
+
+style title_navigation_button is button
+style title_navigation_button_text is button_text
+style title_secondary_button is button
+style title_secondary_button_text is button_text
+
+style title_navigation_button:
+    xsize 698
+    ysize 74
+    background "gui/main_menu/menu_idle.png"
+    hover_background "gui/main_menu/menu_hover.png"
+    insensitive_background "gui/main_menu/menu_insensitive.png"
+    left_padding 103
+    right_padding 70
+    top_padding 0
+    bottom_padding 0
+
+style title_navigation_button_text:
+    font gui.interface_text_font
+    size 34
+    color "#FFFFFF"
+    hover_color "#5D2715"
+    insensitive_color "#CDD5DB"
+    yalign 0.5
+    outlines [(2, "#123B64", 0, 0)]
+    hover_outlines [(1, "#FFF7BA", 0, 0)]
+
+style title_secondary_button:
+    background None
+    hover_background None
+    padding (10, 6)
+
+style title_secondary_button_text:
+    font gui.interface_text_font
+    size 25
+    color "#F7FAFF"
+    hover_color "#FFE659"
+    outlines [(2, "#1C3C4C", 0, 0)]
+
+
 ## 标题菜单屏幕 ######################################################################
 ##
 ## 用于在 Ren'Py 启动时显示标题菜单。
@@ -352,23 +453,18 @@ screen main_menu():
         style "main_menu_frame"
 
     ## use 语句将其他的屏幕包含进此屏幕。标题屏幕的实际内容在导航屏幕中。
-    use navigation
+    use title_navigation
 
     if gui.show_name:
 
         vbox:
-            xalign 0.50
-            yalign 0.07
+            xpos 48
+            ypos 30
             spacing 10
 
-            add "gui/sfls.png":
+            add "gui/Main_Title.png":
                 xalign 0.5
-                zoom 0.52
-
-            text "我挚爱的时光":
-                xalign 0.5
-                size 36
-                color "#238B45"
+                zoom 0.62
 
             text "[config.version]":
                 style "main_menu_version"
@@ -382,10 +478,10 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 1920
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background "gui/main_menu/overlay.png"
 
 style main_menu_vbox:
     xalign 0.5
@@ -404,8 +500,9 @@ style main_menu_title:
 
 style main_menu_version:
     properties gui.text_properties("version")
-    color "#238B45"
+    color "#EAF7FF"
     size 28
+    outlines [(2, "#193F51", 0, 0)]
 
 ## 游戏菜单屏幕 ######################################################################
 ##
