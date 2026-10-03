@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## 初始化
 ################################################################################
 
@@ -373,66 +373,17 @@ style navigation_button_text:
 screen title_navigation():
 
     vbox:
-        style_prefix "title_navigation"
         xpos 0
-        ypos 448
-        spacing 9
+        ypos 418
+        spacing -12
 
-        textbutton _("开始游戏") action Start()
-        textbutton _("继续游戏") action Continue()
-        textbutton _("读取游戏") action ShowMenu("load")
-        textbutton _("设置") action ShowMenu("preferences")
+        use title_ribbon(_("开始游戏"), Start(), "title_start")
+        use title_ribbon(_("继续游戏"), Continue(), "title_continue")
+        use title_ribbon(_("读取游戏"), ShowMenu("load"), "title_load")
+        use title_ribbon(_("设置"), ShowMenu("preferences"), "title_settings")
 
         if renpy.variant("pc"):
-            textbutton _("结束游戏") action Quit(confirm=False)
-
-    hbox:
-        xpos 66
-        ypos 950
-        spacing 24
-        textbutton _("关于") action ShowMenu("about") style "title_secondary_button"
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-            textbutton _("帮助") action ShowMenu("help") style "title_secondary_button"
-
-
-style title_navigation_button is button
-style title_navigation_button_text is button_text
-style title_secondary_button is button
-style title_secondary_button_text is button_text
-
-style title_navigation_button:
-    xsize 698
-    ysize 74
-    background "gui/main_menu/menu_idle.png"
-    hover_background "gui/main_menu/menu_hover.png"
-    insensitive_background "gui/main_menu/menu_insensitive.png"
-    left_padding 103
-    right_padding 70
-    top_padding 0
-    bottom_padding 0
-
-style title_navigation_button_text:
-    font gui.interface_text_font
-    size 34
-    color "#FFFFFF"
-    hover_color "#5D2715"
-    insensitive_color "#CDD5DB"
-    yalign 0.5
-    outlines [(2, "#123B64", 0, 0)]
-    hover_outlines [(1, "#FFF7BA", 0, 0)]
-
-style title_secondary_button:
-    background None
-    hover_background None
-    padding (10, 6)
-
-style title_secondary_button_text:
-    font gui.interface_text_font
-    size 25
-    color "#F7FAFF"
-    hover_color "#FFE659"
-    outlines [(2, "#1C3C4C", 0, 0)]
+            use title_ribbon(_("结束游戏"), Quit(confirm=False), "title_quit")
 
 
 ## 标题菜单屏幕 ######################################################################
@@ -648,7 +599,7 @@ screen about():
 
     ## 此 use 语句将 game_menu 屏幕包含到了这个屏幕内。子级 vbox 将包含在
     ## game_menu 屏幕的 viewport 内。
-    use game_menu(_("关于"), scroll="viewport"):
+    use settings_page("about"):
 
         style_prefix "about"
 
@@ -823,85 +774,75 @@ style slot_button_text:
 ##
 ## https://doc.renpy.cn/zh-CN/screen_special.html#preferences
 
-screen preferences():
+screen preferences(section="system"):
 
     tag menu
 
-    use game_menu(_("设置"), scroll="viewport"):
+    use settings_page(section):
 
         vbox:
+            style_prefix "settings_content"
 
-            hbox:
-                box_wrap True
+            if section == "system":
+                label _("系统设置")
+                text _("调整显示方式与快进行为。")
+                null height 12
 
                 if renpy.variant("pc") or renpy.variant("web"):
-
-                    vbox:
-                        style_prefix "radio"
-                        label _("显示")
+                    label _("显示模式")
+                    hbox:
                         textbutton _("窗口") action Preference("display", "window")
                         textbutton _("全屏") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "check"
-                    label _("快进")
-                    textbutton _("未读文本") action Preference("skip", "toggle")
-                    textbutton _("选项后继续") action Preference("after choices", "toggle")
+                label _("快进选项")
+                hbox:
+                    box_wrap True
+                    textbutton _("跳过未读文本") action Preference("skip", "toggle")
+                    textbutton _("选项后继续快进") action Preference("after choices", "toggle")
                     textbutton _("忽略转场") action InvertSelected(Preference("transitions", "toggle"))
 
-                ## 可在此处添加 radio_pref 或 check_pref 类型的额外 vbox，以添加
-                ## 额外的创建者定义的偏好设置。
+            elif section == "text":
+                label _("文本设置")
+                text _("调整文字出现的速度，以及自动播放时的等待时间。")
+                null height 12
+                label _("文字速度")
+                bar value Preference("text speed") style "settings_slider" id "settings_text_speed"
+                fixed:
+                    xysize (1060, 36)
+                    text _("慢") xalign 0.0
+                    text _("快 / 瞬间显示") xalign 1.0
+                null height 12
+                label _("自动前进时间")
+                bar value Preference("auto-forward time") style "settings_slider" id "settings_auto_time"
+                fixed:
+                    xysize (1060, 36)
+                    text _("短") xalign 0.0
+                    text _("长") xalign 1.0
 
-            null height (4 * gui.pref_spacing)
+            elif section == "sound":
+                label _("声音设置")
+                text _("分别调整音乐、音效与语音的音量。")
 
-            hbox:
-                style_prefix "slider"
-                box_wrap True
+                if config.has_music:
+                    label _("音乐音量")
+                    bar value Preference("music volume") style "settings_slider" id "settings_music_volume"
 
-                vbox:
+                if config.has_sound:
+                    label _("音效音量")
+                    hbox:
+                        bar value Preference("sound volume") style "settings_slider" id "settings_sound_volume"
+                        if config.sample_sound:
+                            textbutton _("测试") action Play("sound", config.sample_sound)
 
-                    label _("文字速度")
+                if config.has_voice:
+                    label _("语音音量")
+                    hbox:
+                        bar value Preference("voice volume") style "settings_slider" id "settings_voice_volume"
+                        if config.sample_voice:
+                            textbutton _("测试") action Play("voice", config.sample_voice)
 
-                    bar value Preference("text speed")
-
-                    label _("自动前进时间")
-
-                    bar value Preference("auto-forward time")
-
-                vbox:
-
-                    if config.has_music:
-                        label _("音乐音量")
-
-                        hbox:
-                            bar value Preference("music volume")
-
-                    if config.has_sound:
-
-                        label _("音效音量")
-
-                        hbox:
-                            bar value Preference("sound volume")
-
-                            if config.sample_sound:
-                                textbutton _("测试") action Play("sound", config.sample_sound)
-
-
-                    if config.has_voice:
-                        label _("语音音量")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("测试") action Play("voice", config.sample_voice)
-
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
-
-                        textbutton _("全部静音"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                if config.has_music or config.has_sound or config.has_voice:
+                    textbutton _("全部静音") action Preference("all mute", "toggle") id "settings_mute"
 
 
 style pref_label is gui_label
@@ -1075,7 +1016,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("帮助"), scroll="viewport"):
+    use settings_page("help"):
 
         style_prefix "help"
 
@@ -1117,7 +1058,7 @@ screen keyboard_help():
         text _("访问游戏菜单。")
 
     hbox:
-        label _("键盘")
+        label "Ctrl"
         text _("按住时快进对话。")
 
     hbox:
@@ -1125,11 +1066,11 @@ screen keyboard_help():
         text _("切换对话快进。")
 
     hbox:
-        label _("上一页")
+        label "Page Up"
         text _("回退至先前的对话。")
 
     hbox:
-        label _("下一页")
+        label "Page Down"
         text _("向前至后来的对话。")
 
     hbox:
