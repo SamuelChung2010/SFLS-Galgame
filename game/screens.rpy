@@ -96,16 +96,47 @@ screen say(who, what):
 
     window:
         id "window"
+        style "campus_dialogue_window"
+        xalign 0.5
+        yalign 1.0
+        xfill False
+        xsize (1840 if renpy.variant("small") else 1792)
+        ysize (340 if renpy.variant("small") else 290)
+        padding (0, 0)
+        background Solid("#0C1722E8")
 
-        if who is not None:
+        fixed:
+            add Solid("#48687B") xysize (1792, 2)
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            if who is not None:
+                window:
+                    id "namebox"
+                    style "campus_namebox"
+                    xpos (48 if renpy.variant("small") else 64)
+                    ypos 24
+                    xsize None
+                    ysize None
+                    padding (0, 0)
+                    background None
+                    text who id "who" style "campus_speaker" size 28 xalign 0.0 yalign 0.0 outlines []
 
-        text what id "what"
+            text what:
+                id "what"
+                style "campus_dialogue_text"
+                xpos (48 if renpy.variant("small") else 64)
+                ypos 72
+                xsize (1744 if renpy.variant("small") else 1664)
+                size (38 if renpy.variant("small") else 32)
+                line_spacing 9
+                color "#F4F7FA"
+                outlines []
 
+            text _("点击继续"):
+                xalign 1.0
+                xoffset -64
+                ypos 28
+                size 18
+                color "#849CAA"
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
@@ -199,7 +230,7 @@ style input:
 ## https://doc.renpy.cn/zh-CN/screen_special.html#choice
 
 screen choice(items):
-    style_prefix "choice"
+    style_prefix "campus_choice"
 
     vbox:
         for i in items:
@@ -229,60 +260,9 @@ style choice_button_text is default:
 ## 快捷菜单显示于游戏内，以便于访问游戏外的菜单。
 
 screen quick_menu():
-
     zorder 100
-
     if quick_menu:
-
-        hbox:
-            style "quick_menu"
-            style_prefix "quick"
-            spacing 4
-
-            textbutton _("回退") action Rollback() style "quick_button"
-
-            imagebutton:
-                idle Transform("gui/under/Under_Backlog_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Backlog_1.png", xysize=(108, 62), fit="contain")
-                action ShowMenu("history")
-
-            imagebutton:
-                idle Transform("gui/under/Under_Skip_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Skip_1.png", xysize=(108, 62), fit="contain")
-                action Skip()
-                alternate Skip(fast=True, confirm=True)
-
-            imagebutton:
-                idle Transform("gui/under/Under_Save_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Save_1.png", xysize=(108, 62), fit="contain")
-                action ShowMenu("save")
-
-            imagebutton:
-                idle Transform("gui/under/Under_QuickSave_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_QuickSave_1.png", xysize=(108, 62), fit="contain")
-                action QuickSave()
-
-            imagebutton:
-                idle Transform("gui/under/Under_QuickLoad_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_QuickLoad_1.png", xysize=(108, 62), fit="contain")
-                action QuickLoad()
-
-            imagebutton:
-                idle Transform("gui/under/Under_Load_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Load_1.png", xysize=(108, 62), fit="contain")
-                action ShowMenu("load")
-
-            imagebutton:
-                idle Transform("gui/under/Under_Config_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Config_1.png", xysize=(108, 62), fit="contain")
-                action ShowMenu("preferences")
-
-            imagebutton:
-                idle Transform("gui/under/Under_Title_0.png", xysize=(108, 62), fit="contain")
-                hover Transform("gui/under/Under_Title_1.png", xysize=(108, 62), fit="contain")
-                action MainMenu()
-
-            textbutton _("自动") action Preference("auto-forward", "toggle") style "quick_button"
+        use gameplay_quickbar
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 屏幕。
 init python:
@@ -1547,19 +1527,9 @@ style pref_vbox:
 ## 易触摸。
 screen quick_menu():
     variant "touch"
-
     zorder 100
-
     if quick_menu:
-
-        hbox:
-            style "quick_menu"
-            style_prefix "quick"
-
-            textbutton _("回退") action Rollback()
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("菜单") action ShowMenu()
+        use gameplay_quickbar(touch=True)
 
 
 style window:
