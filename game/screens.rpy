@@ -101,6 +101,16 @@ screen say(who, what):
         style "campus_dialogue_window"
 
         fixed:
+            # 首个内容框决定高度：短句紧凑，长段落按换行自然扩展。
+            fit_first True
+            window:
+                id "campus_body"
+                style "campus_dialogue_content"
+                text what:
+                    id "what"
+                    prefer_screen_to_id True
+                    style "campus_dialogue_text"
+
             if who is not None:
                 window:
                     id "namebox"
@@ -108,16 +118,11 @@ screen say(who, what):
                     style "campus_namebox"
                     text who id "who" style "campus_speaker" prefer_screen_to_id True
 
-            text what:
-                id "what"
-                prefer_screen_to_id True
-                style "campus_dialogue_text"
-
             ## 纯装饰的翻页箭头；文字仍由 Ren'Py 管理，不写入背景素材。
             add "gui/campus/continue.svg":
                 xalign 1.0
                 yalign 1.0
-                offset (-40, -24)
+                offset (-24, -14)
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
@@ -258,7 +263,7 @@ style choice_button_text is default:
 screen quick_menu():
     zorder 100
     if quick_menu:
-        use gameplay_quickbar
+        use gameplay_quickbar(in_dialogue=renpy.get_screen("say") is not None)
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 屏幕。
 init python:
@@ -1525,7 +1530,7 @@ screen quick_menu():
     variant "touch"
     zorder 100
     if quick_menu:
-        use gameplay_quickbar(touch=True)
+        use gameplay_quickbar(touch=True, in_dialogue=renpy.get_screen("say") is not None)
 
 
 style window:

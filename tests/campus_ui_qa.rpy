@@ -76,6 +76,15 @@ testsuite campus_ui_qa:
         pause 0.3
         screenshot "dialogue-campus"
         python:
+            win = renpy.get_displayable("say", "window")
+            bar = renpy.get_displayable("quick_menu", "campus_toolbar")
+            wr = renpy.render(win, 1920, 1080, 0, 0)
+            qr = renpy.render(bar, 1920, 1080, 0, 0)
+            assert wr.width == (1640 if renpy.variant("small") else 1480)
+            assert wr.height <= (230 if renpy.variant("small") else 200), ("short card", wr.height)
+            assert bar.style.background is None
+            assert qr.height <= (58 if renpy.variant("touch") else 42), ("footer", qr.height)
+            print("COMPACT_OK", wr.width, wr.height, qr.height)
             if os.environ.get("SDL_VIDEODRIVER") == "dummy":
                 qa_pg.image.save(renpy.display.draw.screen, os.path.join(campus_qa_settings.screenshot_directory, "dialogue-physical.png"))
 
@@ -160,9 +169,11 @@ testsuite campus_ui_qa:
             wr = renpy.render(win, 1920, 1080, 0, 0)
             nr = renpy.render(name, 1920, 1080, 0, 0)
             br = renpy.render(body, 1920, 1080, 0, 0)
-            assert wr.width == (1840 if renpy.variant("small") else 1792), ("window", wr.width, wr.height)
-            assert nr.width <= 1120, ("name", nr.width, nr.height)
-            assert br.height + (64 if renpy.variant("small") else 56) < wr.height - 20, ("body", br.width, br.height, wr.height)
+            assert wr.width == (1640 if renpy.variant("small") else 1480), ("window", wr.width, wr.height)
+            assert nr.width <= 1040, ("name", nr.width, nr.height)
+            content = renpy.get_displayable("say", "campus_body")
+            assert br.height + content.style.top_padding <= wr.height - content.style.bottom_padding, ("body", br.width, br.height, wr.height)
+            assert wr.height <= 450, ("long card", wr.height)
             print("LAYOUT_OK", wr.width, wr.height, nr.width, br.width, br.height)
 
         assert id "who"
