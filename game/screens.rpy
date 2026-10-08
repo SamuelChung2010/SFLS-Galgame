@@ -96,47 +96,28 @@ screen say(who, what):
 
     window:
         id "window"
+        ## Character 的默认 window/what/who 样式不能盖过校园布局。
+        prefer_screen_to_id True
         style "campus_dialogue_window"
-        xalign 0.5
-        yalign 1.0
-        xfill False
-        xsize (1840 if renpy.variant("small") else 1792)
-        ysize (340 if renpy.variant("small") else 290)
-        padding (0, 0)
-        background Solid("#0C1722E8")
 
         fixed:
-            add Solid("#48687B") xysize (1792, 2)
-
             if who is not None:
                 window:
                     id "namebox"
+                    prefer_screen_to_id True
                     style "campus_namebox"
-                    xpos (48 if renpy.variant("small") else 64)
-                    ypos 24
-                    xsize None
-                    ysize None
-                    padding (0, 0)
-                    background None
-                    text who id "who" style "campus_speaker" size 28 xalign 0.0 yalign 0.0 outlines []
+                    text who id "who" style "campus_speaker" prefer_screen_to_id True
 
             text what:
                 id "what"
+                prefer_screen_to_id True
                 style "campus_dialogue_text"
-                xpos (48 if renpy.variant("small") else 64)
-                ypos 72
-                xsize (1744 if renpy.variant("small") else 1664)
-                size (38 if renpy.variant("small") else 32)
-                line_spacing 9
-                color "#F4F7FA"
-                outlines []
 
-            text _("点击继续"):
+            ## 纯装饰的翻页箭头；文字仍由 Ren'Py 管理，不写入背景素材。
+            add "gui/campus/continue.svg":
                 xalign 1.0
-                xoffset -64
-                ypos 28
-                size 18
-                color "#849CAA"
+                yalign 1.0
+                offset (-40, -24)
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
@@ -230,11 +211,26 @@ style input:
 ## https://doc.renpy.cn/zh-CN/screen_special.html#choice
 
 screen choice(items):
-    style_prefix "campus_choice"
+    ## 将长选项或大量选项限制在照片区域，避免遮住对话和快捷菜单。
+    viewport:
+        id "campus_choices"
+        xalign 0.5
+        ypos 64
+        xsize (1744 if renpy.variant("small") else 1264)
+        ysize (520 if renpy.variant("small") else 584)
+        scrollbars "vertical"
+        mousewheel True
+        draggable renpy.variant("touch")
+        pagekeys True
+        side_yfill True
+        style_prefix "campus_choice"
 
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
+        vbox:
+            for index, i in enumerate(items):
+                textbutton i.caption:
+                    id ("campus_choice_" + str(index))
+                    action i.action
+                    at campus_choice_motion
 
 
 style choice_vbox is vbox
