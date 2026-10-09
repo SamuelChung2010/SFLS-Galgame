@@ -94,35 +94,36 @@ style frame:
 
 screen say(who, what):
 
+    if who is not None:
+        $ note_bg, note_fg = note_speaker_colors(who)
+
     window:
         id "window"
         ## Character 的默认 window/what/who 样式不能盖过校园布局。
         prefer_screen_to_id True
-        style "campus_dialogue_window"
+        style "note_window"
 
         fixed:
             # 首个内容框决定高度：短句紧凑，长段落按换行自然扩展。
             fit_first True
             window:
-                id "campus_body"
-                style "campus_dialogue_content"
+                id "note_body"
+                style ("note_body" if who is not None else "note_body_narration")
                 text what:
                     id "what"
                     prefer_screen_to_id True
-                    style "campus_dialogue_text"
+                    style "note_dialogue"
 
             if who is not None:
                 window:
                     id "namebox"
                     prefer_screen_to_id True
-                    style "campus_namebox"
-                    text who id "who" style "campus_speaker" prefer_screen_to_id True
+                    style "note_namebox"
+                    background note_plate(note_bg)
+                    text who id "who" style "note_name" color note_fg prefer_screen_to_id True
 
             ## 纯装饰的翻页箭头；文字仍由 Ren'Py 管理，不写入背景素材。
-            add "gui/campus/continue.svg":
-                xalign 1.0
-                yalign 1.0
-                offset (-24, -14)
+            add "gui/note/next.svg" at note_next_bob
 
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
@@ -216,26 +217,27 @@ style input:
 ## https://doc.renpy.cn/zh-CN/screen_special.html#choice
 
 screen choice(items):
-    ## 将长选项或大量选项限制在照片区域，避免遮住对话和快捷菜单。
+    ## 选项从对话纸上方向上排列；较多时在限定区域内滚动。
+    $ note_area = note_choice_area(renpy.get_screen("say") is not None)
     viewport:
-        id "campus_choices"
-        xalign 0.5
-        ypos 64
-        xsize (1744 if renpy.variant("small") else 1264)
-        ysize (520 if renpy.variant("small") else 584)
+        id "note_choices"
+        pos (note_area[0], note_area[1])
+        xsize note_area[2]
+        ysize note_area[3]
         scrollbars "vertical"
         mousewheel True
         draggable renpy.variant("touch")
         pagekeys True
         side_yfill True
-        style_prefix "campus_choice"
+        style_prefix "note_choice"
 
         vbox:
+            yminimum note_area[3]
             for index, i in enumerate(items):
                 textbutton i.caption:
-                    id ("campus_choice_" + str(index))
+                    id ("note_choice_" + str(index))
                     action i.action
-                    at campus_choice_motion
+                    at note_choice_nudge
 
 
 style choice_vbox is vbox
@@ -263,7 +265,7 @@ style choice_button_text is default:
 screen quick_menu():
     zorder 100
     if quick_menu:
-        use gameplay_quickbar(in_dialogue=renpy.get_screen("say") is not None)
+        use note_quickbar(attached=renpy.get_screen("say") is not None)
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 屏幕。
 init python:
@@ -1530,7 +1532,7 @@ screen quick_menu():
     variant "touch"
     zorder 100
     if quick_menu:
-        use gameplay_quickbar(touch=True, in_dialogue=renpy.get_screen("say") is not None)
+        use note_quickbar(attached=renpy.get_screen("say") is not None)
 
 
 style window:
