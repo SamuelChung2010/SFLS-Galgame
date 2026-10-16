@@ -1,4 +1,4 @@
-## 来源：story/chapter1/1.1.1.md；人物与背景使用完整实拍镜头。
+## 来源：script/chapter1/1.1.1.md；人物与背景使用完整实拍镜头。
 ## 主角此前请假，与 A 初中同年级但交往不多，今天第一次见 E、F。
 
 label chapter1_1_1:
@@ -68,7 +68,7 @@ label chapter1_1_1:
             a "行，我就在隔壁。"
 
             scene arrival a_leaving with dissolve
-            "A回了房间。我拧开瓶盖喝了口水，继续整理床铺。"
+            "A回了房间。我把水放在桌边，继续整理床铺。"
             p "我一会跟隔壁的A过去，你们不用等我。"
             roommate_e "行，那我们先走了。"
             roommate_f "走的时候带上钥匙，别落屋里。"

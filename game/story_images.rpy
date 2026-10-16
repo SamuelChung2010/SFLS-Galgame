@@ -34,3 +34,17 @@ image arrival roommates_walk = Solid("#605D43")
 # TODO：主角与 A 一起下楼的完整实拍镜头；照片就绪后改为：
 # image arrival with_a_walk = "images/arrival_with_a_walk.jpg"
 image arrival with_a_walk = Solid("#435565")
+
+
+## 1.1.2 / 1.2.1 的完整实拍镜头；拍摄前沿用纯色占位。
+# TODO：早晨教室，与 B 初次交谈（人物与背景同框）。
+# image chapter1 classroom_morning = "images/chapter1_classroom_morning.jpg"
+image chapter1 classroom_morning = Solid("#566774")
+
+# TODO：中午教室，与 B 寻找校园卡。
+# image chapter1 classroom_noon = "images/chapter1_classroom_noon.jpg"
+image chapter1 classroom_noon = Solid("#716957")
+
+# TODO：中餐厅靠窗座位，与 B 吃饭聊天。
+# image chapter1 chinese_restaurant = "images/chapter1_chinese_restaurant.jpg"
+image chapter1 chinese_restaurant = Solid("#6C5B51")
