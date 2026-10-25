@@ -1,50 +1,67 @@
-## 实拍剧情镜头：人物和场景放在同一张照片中，使用 scene 切换整张图。
-## 拍摄前使用纯色占位，不要将图片路径写成空字符串。
-## 照片准备好后，直接替换对应定义，剧情中的 scene 名称不用改。
+## 完整实拍镜头，以人物/关键动作优先选取 16:9 裁切框，再铺满 1920×1080。
+## 裁切只在 Ren'Py 显示时执行，原始照片和游戏副本不改动。
+## 4:3 人物近景优先保留头顶；接笔镜头优先保留手与笔。
 
-# TODO：行李箱上楼镜头；照片就绪后改为：
-# image arrival stairs = "images/arrival_stairs.jpg"
-image arrival stairs = Solid("#334B60")
-
-# TODO：楼梯间遇见 A 的镜头（人物与背景同框）；照片就绪后改为：
-# image arrival meet_a = "images/arrival_meet_a.jpg"
-image arrival meet_a = Solid("#52604B")
-
-# TODO：进入寝室，遇见 E、F 的镜头；照片就绪后改为：
-# image arrival dorm = "images/arrival_dorm.jpg"
-image arrival dorm = Solid("#604B52")
-
-# TODO：开门后 A 递补水啦的镜头；照片就绪后改为：
-# image arrival door_a = "images/arrival_door_a.jpg"
-image arrival door_a = Solid("#4B6060")
-
-# TODO：A 走回隔壁房间的镜头；照片就绪后改为：
-# image arrival a_leaving = "images/arrival_a_leaving.jpg"
-image arrival a_leaving = Solid("#4D5268")
-
-# TODO：主角与 E、F 边走边聊的镜头；照片就绪后改为：
-# image arrival roommates_walk = "images/arrival_roommates_walk.jpg"
-image arrival roommates_walk = Solid("#605D43")
-
-## 在剧情 label 中使用，例如：
-##     scene arrival stairs with fade
-##     "我拖着行李箱爬上楼梯。"
-##     scene arrival meet_a with dissolve
-
-# TODO：主角与 A 一起下楼的完整实拍镜头；照片就绪后改为：
-# image arrival with_a_walk = "images/arrival_with_a_walk.jpg"
-image arrival with_a_walk = Solid("#435565")
-
-
-## 1.1.2 / 1.2.1 的完整实拍镜头；拍摄前沿用纯色占位。
-# TODO：早晨教室，与 B 初次交谈（人物与背景同框）。
-# image chapter1 classroom_morning = "images/chapter1_classroom_morning.jpg"
-image chapter1 classroom_morning = Solid("#566774")
-
-# TODO：中午教室，与 B 寻找校园卡。
-# image chapter1 classroom_noon = "images/chapter1_classroom_noon.jpg"
-image chapter1 classroom_noon = Solid("#716957")
-
-# TODO：中餐厅靠窗座位，与 B 吃饭聊天。
-# image chapter1 chinese_restaurant = "images/chapter1_chinese_restaurant.jpg"
-image chapter1 chinese_restaurant = Solid("#6C5B51")
+image chapter1 campus = Transform("pictures/demo/campus.jpg", crop=(0.0, 0, 1920.0, 1080), crop_relative=False, xysize=(1920, 1080))
+image chapter1 a_door = Transform("pictures/demo/1.1.1/dorm1.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 a_standing = Transform("pictures/demo/1.1.1/dorm6.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 a_talk = Transform("pictures/demo/standby/A/329.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 a_tired = Transform("pictures/demo/standby/A/328.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 dorm_f = Transform("pictures/demo/1.1.1/dorm2.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 dorm_f_think = Transform("pictures/demo/1.1.1/dorm3.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 dorm_e = Transform("pictures/demo/1.1.1/dorm4.jpg", crop=(0.0, 0, 1280.0, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 dorm_e_folded = Transform("pictures/demo/1.1.1/dorm5.jpg", crop=(0.0, 0, 1280.0, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_enter = Transform("pictures/demo/1.1.2/classroom1.jpg", crop=(0, 0.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_seated = Transform("pictures/demo/1.1.2/classroom2.jpg", crop=(0, 0.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_pen_reach = Transform("pictures/demo/1.1.2/classroom3.jpg", crop=(0, 243.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_pen_return = Transform("pictures/demo/1.1.2/classroom4.jpg", crop=(0, 243.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 corridor = Transform("pictures/demo/1.2.1/corridor1.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_running = Transform("pictures/demo/1.2.1/corridor2.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_near = Transform("pictures/demo/1.2.1/corridor3.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_hand = Transform("pictures/demo/1.2.1/corridor5.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 oldbuilding = Transform("pictures/demo/1.2.1/oldbuilding1.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 oldbuilding_walk = Transform("pictures/demo/1.2.1/oldbuilding2.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 oldbuilding_room = Transform("pictures/demo/1.2.1/oldbuilding3.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 props = Transform("pictures/demo/1.2.1/ob5.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 sword = Transform("pictures/demo/1.2.1/ob6.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_pose = Transform("pictures/demo/1.2.1/ob7.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_sword = Transform("pictures/demo/1.2.1/ob8.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_hero = Transform("pictures/demo/1.2.1/ob9.jpg", crop=(0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_leaving = Transform("pictures/demo/1.2.1/ob10.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 night_f = Transform("pictures/demo/1.2.2/dorm1.jpg", crop=(0, 27.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 night_e = Transform("pictures/demo/1.2.2/dorm2.jpg", crop=(0, 0.25, 1672, 940.5), crop_relative=False, xysize=(1920, 1080))
+image chapter1 night_f_think = Transform("pictures/demo/1.2.2/dorm3.jpg", crop=(0, 27.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 night_e_point = Transform("pictures/demo/1.2.2/dorm4.jpg", crop=(0, 0.25, 1672, 940.5), crop_relative=False, xysize=(1920, 1080))
+image chapter1 night_f_smile = Transform("pictures/demo/1.2.2/dorm5.jpg", crop=(0, 67.5, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 field = Transform("pictures/demo/1.2.3/footballfield1.jpg", crop=(0, 135.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 ball = Transform("pictures/demo/1.2.3/footballfield2.jpg", crop=(0, 135.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_hand = Transform("pictures/demo/1.2.3/footballfield3.jpg", crop=(0, 81.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_think = Transform("pictures/demo/1.2.3/footballfield4.jpg", crop=(0, 94.5, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_talk = Transform("pictures/demo/1.2.3/footballfield5.jpg", crop=(0, 94.5, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_sorry = Transform("pictures/demo/1.2.3/footballfield6.jpg", crop=(0, 94.5, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_play = Transform("pictures/demo/1.2.3/footballfield7.jpg", crop=(0, 135.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_chase = Transform("pictures/demo/1.2.3/footballfield8.jpg", crop=(0, 135.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_kick = Transform("pictures/demo/1.2.3/footballfield9.jpg", crop=(0, 135.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_wide = Transform("pictures/demo/1.2.3/footballfield10.jpg", crop=(0, 81.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 g_leaving = Transform("pictures/demo/1.2.3/footballfield11.jpg", crop=(0, 162.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_search = Transform("pictures/demo/1.3.1/classroom1.jpg", crop=(0, 189.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_pocket = Transform("pictures/demo/1.3.1/classroom2.jpg", crop=(0, 67.5, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_restaurant = Transform("pictures/demo/1.3.1/western_restaurant1.jpg", crop=(0, 0.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_restaurant_laugh = Transform("pictures/demo/1.3.1/western_restaurant2.jpg", crop=(0, 0.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 b_restaurant_talk = Transform("pictures/demo/1.3.1/western_restaurant3.jpg", crop=(0, 0.0, 1440, 810.0), crop_relative=False, xysize=(1920, 1080))
+image chapter1 bathroom = Transform("pictures/demo/1.3.2/helping/bathroom1.jpg", crop=(0.0, 0, 1280.0, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 paper = Transform("pictures/demo/1.3.2/helping/bathroom2.jpg", crop=(0.0, 0, 1280.0, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 e_saved = Transform("pictures/demo/1.3.2/be saved.jpg", crop=(0, 1.406, 1915, 1077.188), crop_relative=False, xysize=(1920, 1080))
+image chapter1 collision = Transform("pictures/demo/1.2.1/corridor4.jpg", crop=(0.222, 0.0, 579.556, 326), crop_relative=False, xysize=(1920, 1080))
+image chapter1 d_leaving_far = Transform("pictures/demo/1.2.1/ob11.jpg", crop=(0.0, 1.312, 1702, 957.375), crop_relative=False, xysize=(1920, 1080))
+image arrival stairs = "chapter1 campus"
+image arrival meet_a = "chapter1 a_door"
+image arrival dorm = "chapter1 dorm_e"
+image arrival door_a = "chapter1 a_standing"
+image arrival a_leaving = "chapter1 a_standing"
+image arrival roommates_walk = "chapter1 campus"
+image arrival with_a_walk = "chapter1 campus"
+image chapter1 classroom_morning = "chapter1 b_enter"
+image chapter1 classroom_noon = "chapter1 b_search"
+image chapter1 chinese_restaurant = "chapter1 b_restaurant"
+image chapter1 campus_evening = Transform("chapter1 campus", matrixcolor=BrightnessMatrix(-0.3))

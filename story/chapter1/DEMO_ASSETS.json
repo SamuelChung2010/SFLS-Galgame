@@ -1,0 +1,982 @@
+[
+  {
+    "image": "chapter1 campus",
+    "source": "gui\\main_menu.jpg",
+    "runtime": "pictures/demo/campus.jpg",
+    "size": [
+      1920,
+      1080
+    ],
+    "crop": [
+      0.0,
+      0,
+      1920.0,
+      1080
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 a_door",
+    "source": "pictures\\1.1.1\\dorm1.JPG",
+    "runtime": "pictures/demo/1.1.1/dorm1.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 a_standing",
+    "source": "pictures\\1.1.1\\dorm6.JPG",
+    "runtime": "pictures/demo/1.1.1/dorm6.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 a_talk",
+    "source": "pictures\\standby\\A\\329.JPG",
+    "runtime": "pictures/demo/standby/A/329.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 a_tired",
+    "source": "pictures\\standby\\A\\328.JPG",
+    "runtime": "pictures/demo/standby/A/328.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 dorm_f",
+    "source": "pictures\\1.1.1\\dorm2.JPG",
+    "runtime": "pictures/demo/1.1.1/dorm2.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 dorm_f_think",
+    "source": "pictures\\1.1.1\\dorm3.JPG",
+    "runtime": "pictures/demo/1.1.1/dorm3.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 dorm_e",
+    "source": "pictures\\1.1.1\\dorm4.jpg",
+    "runtime": "pictures/demo/1.1.1/dorm4.jpg",
+    "size": [
+      1280,
+      720
+    ],
+    "crop": [
+      0.0,
+      0,
+      1280.0,
+      720
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 dorm_e_folded",
+    "source": "pictures\\1.1.1\\dorm5.jpg",
+    "runtime": "pictures/demo/1.1.1/dorm5.jpg",
+    "size": [
+      1280,
+      720
+    ],
+    "crop": [
+      0.0,
+      0,
+      1280.0,
+      720
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_enter",
+    "source": "pictures\\1.1.2\\classroom1.HEIC",
+    "runtime": "pictures/demo/1.1.2/classroom1.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      0.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_seated",
+    "source": "pictures\\1.1.2\\classroom2.png",
+    "runtime": "pictures/demo/1.1.2/classroom2.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      0.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_pen_reach",
+    "source": "pictures\\1.1.2\\classroom3.HEIC",
+    "runtime": "pictures/demo/1.1.2/classroom3.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      243.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_pen_return",
+    "source": "pictures\\1.1.2\\classroom4.HEIC",
+    "runtime": "pictures/demo/1.1.2/classroom4.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      243.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 corridor",
+    "source": "pictures\\1.2.1\\corridor1.JPG",
+    "runtime": "pictures/demo/1.2.1/corridor1.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_running",
+    "source": "pictures\\1.2.1\\corridor2.JPG",
+    "runtime": "pictures/demo/1.2.1/corridor2.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_near",
+    "source": "pictures\\1.2.1\\corridor3.JPG",
+    "runtime": "pictures/demo/1.2.1/corridor3.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_hand",
+    "source": "pictures\\1.2.1\\corridor5.JPG",
+    "runtime": "pictures/demo/1.2.1/corridor5.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 oldbuilding",
+    "source": "pictures\\1.2.1\\oldbuilding1.jpg",
+    "runtime": "pictures/demo/1.2.1/oldbuilding1.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 oldbuilding_walk",
+    "source": "pictures\\1.2.1\\oldbuilding2.jpg",
+    "runtime": "pictures/demo/1.2.1/oldbuilding2.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 oldbuilding_room",
+    "source": "pictures\\1.2.1\\oldbuilding3.jpg",
+    "runtime": "pictures/demo/1.2.1/oldbuilding3.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 props",
+    "source": "pictures\\1.2.1\\ob5.jpg",
+    "runtime": "pictures/demo/1.2.1/ob5.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 sword",
+    "source": "pictures\\1.2.1\\ob6.jpg",
+    "runtime": "pictures/demo/1.2.1/ob6.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_pose",
+    "source": "pictures\\1.2.1\\ob7.JPG",
+    "runtime": "pictures/demo/1.2.1/ob7.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_sword",
+    "source": "pictures\\1.2.1\\ob8.JPG",
+    "runtime": "pictures/demo/1.2.1/ob8.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_hero",
+    "source": "pictures\\1.2.1\\ob9.JPG",
+    "runtime": "pictures/demo/1.2.1/ob9.jpg",
+    "size": [
+      1702,
+      960
+    ],
+    "crop": [
+      0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_leaving",
+    "source": "pictures\\1.2.1\\ob10.JPG",
+    "runtime": "pictures/demo/1.2.1/ob10.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 night_f",
+    "source": "pictures\\1.2.2\\dorm1.png",
+    "runtime": "pictures/demo/1.2.2/dorm1.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      27.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 night_e",
+    "source": "pictures\\1.2.2\\dorm2.png",
+    "runtime": "pictures/demo/1.2.2/dorm2.jpg",
+    "size": [
+      1672,
+      941
+    ],
+    "crop": [
+      0,
+      0.25,
+      1672,
+      940.5
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 night_f_think",
+    "source": "pictures\\1.2.2\\dorm3.png",
+    "runtime": "pictures/demo/1.2.2/dorm3.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      27.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 night_e_point",
+    "source": "pictures\\1.2.2\\dorm4.png",
+    "runtime": "pictures/demo/1.2.2/dorm4.jpg",
+    "size": [
+      1672,
+      941
+    ],
+    "crop": [
+      0,
+      0.25,
+      1672,
+      940.5
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 night_f_smile",
+    "source": "pictures\\1.2.2\\dorm5.png",
+    "runtime": "pictures/demo/1.2.2/dorm5.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      67.5,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 field",
+    "source": "pictures\\1.2.3\\footballfield1.JPG",
+    "runtime": "pictures/demo/1.2.3/footballfield1.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      135.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 ball",
+    "source": "pictures\\1.2.3\\footballfield2.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield2.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      135.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_hand",
+    "source": "pictures\\1.2.3\\footballfield3.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield3.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      81.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_think",
+    "source": "pictures\\1.2.3\\footballfield4.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield4.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      94.5,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_talk",
+    "source": "pictures\\1.2.3\\footballfield5.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield5.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      94.5,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_sorry",
+    "source": "pictures\\1.2.3\\footballfield6.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield6.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      94.5,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_play",
+    "source": "pictures\\1.2.3\\footballfield7.JPG",
+    "runtime": "pictures/demo/1.2.3/footballfield7.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      135.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_chase",
+    "source": "pictures\\1.2.3\\footballfield8.JPG",
+    "runtime": "pictures/demo/1.2.3/footballfield8.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      135.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_kick",
+    "source": "pictures\\1.2.3\\footballfield9.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield9.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      135.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_wide",
+    "source": "pictures\\1.2.3\\footballfield10.JPG",
+    "runtime": "pictures/demo/1.2.3/footballfield10.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      81.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 g_leaving",
+    "source": "pictures\\1.2.3\\footballfield11.jpeg",
+    "runtime": "pictures/demo/1.2.3/footballfield11.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      162.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_search",
+    "source": "pictures\\1.3.1\\classroom1.HEIC",
+    "runtime": "pictures/demo/1.3.1/classroom1.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      189.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_pocket",
+    "source": "pictures\\1.3.1\\classroom2.HEIC",
+    "runtime": "pictures/demo/1.3.1/classroom2.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      67.5,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_restaurant",
+    "source": "pictures\\1.3.1\\western_restaurant1.HEIC",
+    "runtime": "pictures/demo/1.3.1/western_restaurant1.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      0.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_restaurant_laugh",
+    "source": "pictures\\1.3.1\\western_restaurant2.HEIC",
+    "runtime": "pictures/demo/1.3.1/western_restaurant2.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      0.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 b_restaurant_talk",
+    "source": "pictures\\1.3.1\\western_restaurant3.HEIC",
+    "runtime": "pictures/demo/1.3.1/western_restaurant3.jpg",
+    "size": [
+      1440,
+      1080
+    ],
+    "crop": [
+      0,
+      0.0,
+      1440,
+      810.0
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 bathroom",
+    "source": "pictures\\1.3.2\\helping\\bathroom1.jpg",
+    "runtime": "pictures/demo/1.3.2/helping/bathroom1.jpg",
+    "size": [
+      1280,
+      720
+    ],
+    "crop": [
+      0.0,
+      0,
+      1280.0,
+      720
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 paper",
+    "source": "pictures\\1.3.2\\helping\\bathroom2.jpg",
+    "runtime": "pictures/demo/1.3.2/helping/bathroom2.jpg",
+    "size": [
+      1280,
+      720
+    ],
+    "crop": [
+      0.0,
+      0,
+      1280.0,
+      720
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 e_saved",
+    "source": "pictures\\1.3.2\\be saved.JPG",
+    "runtime": "pictures/demo/1.3.2/be saved.jpg",
+    "size": [
+      1915,
+      1080
+    ],
+    "crop": [
+      0,
+      1.406,
+      1915,
+      1077.188
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 collision",
+    "source": "pictures/1.2.1/corridor4.jpg",
+    "runtime": "pictures/demo/1.2.1/corridor4.jpg",
+    "crop": [
+      0.222,
+      0.0,
+      579.556,
+      326
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 d_leaving_far",
+    "source": "pictures/1.2.1/ob11.JPG",
+    "runtime": "pictures/demo/1.2.1/ob11.jpg",
+    "crop": [
+      0.0,
+      1.312,
+      1702,
+      957.375
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  }
+]
