@@ -22,13 +22,13 @@ default g_affection = 0
 default chapter1_demo_completed = False
 
 label start:
-    call chapter1_1_1
-    call chapter1_1_2
-    call chapter1_2_1
-    call chapter1_2_2
-    call chapter1_2_3
-    call chapter1_3_1
-    call chapter1_3_2
+    call chapter1_1_1 from _call_chapter1_1_1
+    call chapter1_1_2 from _call_chapter1_1_2
+    call chapter1_2_1 from _call_chapter1_2_1
+    call chapter1_2_2 from _call_chapter1_2_2
+    call chapter1_2_3 from _call_chapter1_2_3
+    call chapter1_3_1 from _call_chapter1_3_1
+    call chapter1_3_2 from _call_chapter1_3_2
     $ chapter1_demo_completed = True
     $ quick_menu = False
     window hide
