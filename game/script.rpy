@@ -6,7 +6,7 @@ define b = Character("齐文昌", color="#B5D8EC")
 define d = Character("小邓", color="#FFC99D")
 define roommate_e = Character("王力豪", color="#A4E5AE")
 define roommate_f = Character("李哥", color="#C9B6FF")
-define g = Character("G", color="#9EDFD4")
+define g = Character("Alexios", color="#9EDFD4")
 define teacher = Character("老师", color="#E7D6B7")
 define teammate = Character("队友", color="#D5E0E9")
 

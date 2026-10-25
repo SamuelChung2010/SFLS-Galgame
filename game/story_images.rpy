@@ -78,3 +78,8 @@ image chapter1 field_entry = Transform("pictures/demo/1.2.3/start1.jpg", crop=(0
 image chapter1 track_approach = Transform("pictures/demo/1.2.3/start2.jpg", crop=(0, 94.303, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
 image chapter1 campus_nap = Transform("pictures/demo/campus/quiet_cat.jpg", crop=(0, 255.966, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
 image chapter1 field_overview = Transform("pictures/demo/campus/field_overview.jpg", crop=(0, 148.191, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+
+## 1.3.2 未帮忙后的阳台分支。原图为 16:9，整幅铺满。
+image chapter1 paper_ignored = Transform("pictures/demo/1.3.2/not helping/bathroom1.jpg", crop=(0, 0, 1280, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 balcony_locked = Transform("pictures/demo/1.3.2/not helping/dorm1.jpg", crop=(0, 0, 1280, 720), crop_relative=False, xysize=(1920, 1080))
+image chapter1 balcony_teasing = Transform("pictures/demo/1.3.2/not helping/dorm2.jpg", crop=(0, 0, 1280, 720), crop_relative=False, xysize=(1920, 1080))
