@@ -1,5 +1,7 @@
 # SFLS～我挚爱的时光～
 
+**SFLS ~Dear Moments~**
+
 以深圳外国语学校高中部为背景的校园实拍视觉小说，由 **SFLS 计算机科学社**成员合作开发，是 2026–2027 学年社团项目。
 
 [官方网站](https://sflsgal.top/) · [第一章 Demo 下载与说明](https://github.com/SamuelChung2010/SFLS-Galgame/releases/tag/v0.1.0-demo) · [问题反馈](https://github.com/SamuelChung2010/SFLS-Galgame/issues)
@@ -14,14 +16,14 @@
 
 | 平台 | 游戏包 | 大小 |
 | --- | --- | --- |
-| Windows / Linux | [SFLS_Beloved_Days-demo-Win.Linux.zip](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Win.Linux.zip) | 约 94.9 MiB |
-| macOS | [SFLS_Beloved_Days-demo-Mac.zip](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Mac.zip) | 约 89.3 MiB |
+| Windows / Linux | [Windows / Linux 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Win.Linux.zip) | 约 94.9 MiB |
+| macOS | [macOS 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Mac.zip) | 约 89.3 MiB |
 
 ### 如何游玩
 
 1. 下载上表中对应系统的游戏 ZIP 压缩包。
 2. **完整解压**到一个文件夹，保留其中所有文件和目录。
-3. Windows 用户运行文件夹中的 `SFLS_Beloved_Days.exe`；其他平台使用包内对应的启动文件。
+3. 运行解压目录中对应系统的游戏启动程序。Windows 使用游戏 `.exe`，其他平台使用包内对应启动文件。
 
 游玩发行包无需另外安装 Ren’Py。Releases 页面自动生成的 **Source code (zip / tar.gz)** 是项目源码；直接游玩请下载上表中的游戏包。
 
@@ -49,6 +51,10 @@
 | 第四章 | 运动会 | 剧情规划中 |
 
 整体叙事暂定采用「共通主线 + 人物关系支线 + 校园事件短支线 + 多结局」。以上为开发规划，不代表本次 Demo 已包含全部内容；后续安排以项目更新为准。
+
+## 英文名称
+
+项目英文名统一为 **SFLS ~Dear Moments~**，打包标识使用 `SFLS_Dear_Moments`。
 
 ## 开发与项目结构
 
@@ -83,3 +89,4 @@ tests/                  测试与验证脚本
 开发：**SFLS 计算机科学社** · [sflsgal.top](https://sflsgal.top/)
 
 学生创作作品，非学校官方出品。
+
