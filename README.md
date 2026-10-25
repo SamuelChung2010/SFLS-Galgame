@@ -15,8 +15,8 @@
 
 | 平台 | 游戏包 | 大小 |
 | --- | --- | --- |
-| Windows / Linux | [Windows / Linux 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Win.Linux.zip) | 约 94.9 MiB |
-| macOS | [macOS 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Mac.zip) | 约 89.3 MiB |
+| Windows / Linux | [Windows / Linux 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Dear_Moments-demo-Win.Linux.zip) | 约 94.9 MiB |
+| macOS | [macOS 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Dear_Moments-demo-Mac.zip) | 约 89.3 MiB |
 
 ### 如何游玩
 
