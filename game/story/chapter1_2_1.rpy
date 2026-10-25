@@ -112,6 +112,7 @@ label chapter1_2_1:
     "本来只是去吃顿饭，结果莫名其妙跟着他逛了一趟空教学楼。"
     "不过，这家伙倒还挺有意思的。"
     $ d_affection += 1
+    scene chapter1 teaching_square with fade
     "我也往教室走去。晚自习还没开始，正好能把今天的笔记理一理。"
 
     return

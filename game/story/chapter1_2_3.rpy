@@ -2,10 +2,12 @@
 
 label chapter1_2_3:
 
-    scene chapter1 field with fade
+    scene chapter1 field_entry with fade
     play music "audio/bgm/Background music(1).ogg" fadein 1.0 volume 0.6
     "第二天晚饭后，离晚自习还有一段时间。"
+    scene chapter1 track_approach with dissolve
     "我暂时没有什么事情，便一个人在操场上散步。"
+    scene chapter1 field with dissolve
     "旁边的足球场上，几名学生正在踢球。我并没有太在意，只是沿着跑道慢慢向前走。"
     "这时，足球场上传来一阵喊声。"
     teammate "G！这边！"
@@ -138,7 +140,7 @@ label chapter1_2_3:
             teammate "你先把锁装上！"
             "……"
             $ g_affection += 1
-    scene chapter1 field with fade
+    scene chapter1 field_overview with fade
     "晚自习前，我沿着跑道慢慢往回走。今天倒是又认识了一个人。"
 
     return

@@ -2,7 +2,7 @@
 ## 来源正文只有递纸与离开；本 demo 不使用旧版锁阳台镜头。
 label chapter1_3_2:
 
-    scene chapter1 campus with fade
+    scene chapter1 arrival_walkway with fade
     "又一个周二，12点45分。我和倒霉熊刚从食堂出来，正往宿舍走。"
     p "这帮学长学姐也太爽了吧，比我们吃饭还早。隔壁班那些人也是，跑那么快，害得所有人都得一起卷。"
     a "是啊，我们就剩点菜汤了，根本吃不饱嘛。没事，等明年就好了。"
@@ -41,7 +41,8 @@ label chapter1_3_2:
     "折腾完这一阵，午休的时间也剩得不多了。我爬上床，定好闹钟。"
     "刚来时还不太习惯的寝室，好像已经没那么陌生了。"
     stop music fadeout 1.5
-    scene black with fade
+    scene chapter1 campus_nap with fade
     "至于下午会发生什么，等睡醒再说吧。"
+    scene black with fade
 
     return

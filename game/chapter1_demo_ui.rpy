@@ -1,7 +1,7 @@
 ## 第一章 demo 结束页。
 screen chapter1_demo_end():
     modal True
-    add "chapter1 campus"
+    add "chapter1 teaching_square"
     add Solid("#081B2CCB")
     vbox:
         align (0.5, 0.48)

@@ -64,4 +64,17 @@ image arrival with_a_walk = "chapter1 campus"
 image chapter1 classroom_morning = "chapter1 b_enter"
 image chapter1 classroom_noon = "chapter1 b_search"
 image chapter1 chinese_restaurant = "chapter1 b_restaurant"
-image chapter1 campus_evening = Transform("chapter1 campus", matrixcolor=BrightnessMatrix(-0.3))
+image chapter1 campus_evening = Transform("chapter1 teaching_square", matrixcolor=BrightnessMatrix(-0.3))
+
+## 新增校园建立镜头：按各节 start/end 顺序连接入场与收尾。
+image chapter1 arrival_walkway = Transform("pictures/demo/1.1.1/start1.jpg", crop=(0, 175.134, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 arrival_cat = Transform("pictures/demo/1.1.1/start2.jpg", crop=(0, 255.966, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 class_route = Transform("pictures/demo/1.1.2/start1.jpg", crop=(0, 121.247, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 class_courts = Transform("pictures/demo/1.1.2/start2.jpg", crop=(0, 148.191, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 class_field_view = Transform("pictures/demo/1.1.2/start3.jpg", crop=(0, 215.55, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 class_building = Transform("pictures/demo/1.1.2/start4.jpg", crop=(0, 40.416, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 teaching_square = Transform("pictures/demo/1.2.1/end.jpg", crop=(0, 229.022, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 field_entry = Transform("pictures/demo/1.2.3/start1.jpg", crop=(0, 269.438, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 track_approach = Transform("pictures/demo/1.2.3/start2.jpg", crop=(0, 94.303, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 campus_nap = Transform("pictures/demo/campus/quiet_cat.jpg", crop=(0, 255.966, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))
+image chapter1 field_overview = Transform("pictures/demo/campus/field_overview.jpg", crop=(0, 148.191, 1441, 810.562), crop_relative=False, xysize=(1920, 1080))

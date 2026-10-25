@@ -67,6 +67,7 @@ label chapter1_3_1:
     b "嗯。"
     "一张校卡，让我发现了同桌的另一面。"
     $ b_affection += 1
+    scene chapter1 teaching_square with fade
     "饭后回教室的路上，我们还在聊周末的联机安排。"
 
     return

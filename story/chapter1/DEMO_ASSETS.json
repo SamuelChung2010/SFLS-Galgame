@@ -978,5 +978,214 @@
       1920,
       1080
     ]
+  },
+  {
+    "image": "chapter1 arrival_walkway",
+    "source": "pictures/1.1.1/start1.jpg",
+    "runtime": "pictures/demo/1.1.1/start1.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      175.134,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 arrival_cat",
+    "source": "pictures/1.1.1/start2.jpg",
+    "runtime": "pictures/demo/1.1.1/start2.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      255.966,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 class_route",
+    "source": "pictures/1.1.2/start1.jpg",
+    "runtime": "pictures/demo/1.1.2/start1.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      121.247,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 class_courts",
+    "source": "pictures/1.1.2/start2.jpg",
+    "runtime": "pictures/demo/1.1.2/start2.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      148.191,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 class_field_view",
+    "source": "pictures/1.1.2/start3.jpg",
+    "runtime": "pictures/demo/1.1.2/start3.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      215.55,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 class_building",
+    "source": "pictures/1.1.2/start4.jpg",
+    "runtime": "pictures/demo/1.1.2/start4.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      40.416,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 teaching_square",
+    "source": "pictures/1.2.1/end.jpg",
+    "runtime": "pictures/demo/1.2.1/end.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      229.022,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 field_entry",
+    "source": "pictures/1.2.3/start1.jpg",
+    "runtime": "pictures/demo/1.2.3/start1.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      269.438,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 track_approach",
+    "source": "pictures/1.2.3/start2.jpg",
+    "runtime": "pictures/demo/1.2.3/start2.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      94.303,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 campus_nap",
+    "source": "pictures/Weixin Image_20261025152108_24_2.jpg",
+    "runtime": "pictures/demo/campus/quiet_cat.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      255.966,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "image": "chapter1 field_overview",
+    "source": "pictures/Weixin Image_20261025153118_34_2.jpg",
+    "runtime": "pictures/demo/campus/field_overview.jpg",
+    "size": [
+      1441,
+      1080
+    ],
+    "crop": [
+      0,
+      148.191,
+      1441,
+      810.562
+    ],
+    "output_size": [
+      1920,
+      1080
+    ]
   }
 ]

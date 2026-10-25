@@ -2,7 +2,7 @@
 
 label chapter1_1_2:
 
-    scene chapter1 campus with dissolve
+    scene chapter1 class_route with dissolve
     if arrival_companion == "a":
         "我和倒霉熊并肩走着，手里拿着他刚给的“补水啦”。"
         a "你那几个舍友怎么样？"
@@ -37,6 +37,11 @@ label chapter1_1_2:
         roommate_e "啧，看来今天运气一般。"
         roommate_f "中奖率本来就不高。"
         roommate_e "没事，运气得留给更重要的事。走了走了！"
+    scene chapter1 class_courts with dissolve
+    "路边的球场很显眼，我默默记了一下这个位置。"
+    scene chapter1 class_field_view with dissolve
+    "从连廊望过去，操场和跑道就在不远处。"
+    scene chapter1 class_building with dissolve
     "那天下午，我们按时参加了集合。把接下来的安排记好后，我回宿舍收拾完剩下的行李。"
     scene black with fade
     "第二天早晨。"

@@ -2,11 +2,13 @@
 
 label chapter1_1_1:
 
-    scene chapter1 campus with fade
+    scene chapter1 arrival_walkway with fade
     play music "audio/bgm/焉知晴雨.mp3" fadein 1.5 volume 0.6
     "以前听人说‘等你上了高中’，总觉得还早。"
     "现在连住校的行李都带来了，倒还有点不习惯。"
     "新的班级，新的舍友……也不知道大家好不好相处。"
+    scene chapter1 arrival_cat with dissolve
+    "连廊边，一只猫正靠着墙休息。我拖着箱子从它旁边走过，继续往宿舍楼走。"
     "8月31日下午，我把行李箱抬上最后几级台阶，靠着墙喘了口气。"
     "前些天一直请假在家，今天才第一次搬进宿舍。正式住校要带的东西，比我想象中多得多。"
     scene chapter1 a_door with dissolve
@@ -52,7 +54,7 @@ label chapter1_1_1:
             "我把床铺好，把暂时用不到的东西塞回箱子里。王力豪和李哥也准备出门了。"
             roommate_e "好了？那一块走吧。"
             p "好。"
-            scene chapter1 campus with fade
+            scene chapter1 class_route with fade
             roommate_e "刚才那位，你以前就认识啊？"
             p "嗯，初中同年级，不过以前没怎么聊过。"
             roommate_e "挺巧。你今天第一次来，路还不熟的话就跟着我们。"
@@ -74,7 +76,7 @@ label chapter1_1_1:
             "铺好床，我把钥匙装进口袋，去隔壁敲了敲门。"
             scene chapter1 a_talk with dissolve
             a "好了？走吧。"
-            scene chapter1 campus with fade
+            scene chapter1 class_route with fade
             p "刚才还觉得行李少带了什么，现在只想下次少带一点。"
             a "你先住两天再说，说不定到时候又想往学校搬了。"
             "我笑了笑，跟着他下楼。新宿舍里还有不少东西没收拾，不过总算安顿下来了。"
