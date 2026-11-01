@@ -1,6 +1,5 @@
 # SFLS～我挚爱的时光～
 
-**SFLS ~Dear Moments~**
 
 以深圳外国语学校高中部为背景的校园实拍视觉小说，由 **SFLS 计算机科学社**成员合作开发，是 2026–2027 学年社团项目。
 
@@ -16,8 +15,8 @@
 
 | 平台 | 游戏包 | 大小 |
 | --- | --- | --- |
-| Windows / Linux | [Windows / Linux 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Win.Linux.zip) | 约 94.9 MiB |
-| macOS | [macOS 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Beloved_Days-demo-Mac.zip) | 约 89.3 MiB |
+| Windows / Linux | [Windows / Linux 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Dear_Moments-demo-Win.Linux.zip) | 约 94.9 MiB |
+| macOS | [macOS 体验版](https://github.com/SamuelChung2010/SFLS-Galgame/releases/download/v0.1.0-demo/SFLS_Dear_Moments-demo-Mac.zip) | 约 89.3 MiB |
 
 ### 如何游玩
 
@@ -58,9 +57,6 @@
 
 整体叙事暂定采用「共通主线 + 人物关系支线 + 校园事件短支线 + 多结局」。以上为开发规划，不代表本次 Demo 已包含全部内容；后续安排以项目更新为准。
 
-## 英文名称
-
-项目英文名统一为 **SFLS ~Dear Moments~**，打包标识使用 `SFLS_Dear_Moments`。
 
 ## 开发与项目结构
 
