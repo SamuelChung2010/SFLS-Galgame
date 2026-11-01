@@ -1,35 +1,43 @@
 ## 来源：story/chapter1/1.3.1.md
-## 找到校卡的特写和中餐厅实拍待补；暂沿用 B 的找物及餐厅近景。
+## 校卡段使用重拍照片；餐厅对话沿用现有西餐厅照片。
 label chapter1_3_1:
 
     scene chapter1 b_search with fade
-    play music "audio/bgm/焉知晴雨.mp3" fadeout 1.0 fadein 1.5 volume 0.6
+    play music "audio/bgm/happy background music by Wu.ogg" fadeout 1.0 fadein 1.5 volume 0.6
     "开学几天后的中午，同学们陆续离开。我收拾好东西，却发现齐文昌还坐在座位上翻书包。"
     p "怎么了？不去吃饭？"
     b "……校卡找不到了。"
+    scene chapter1 b_search_worried with dissolve
     p "上午不是还用过？"
     b "嗯，应该带了。"
     p "两个人找快一点。"
     b "……那麻烦你了。"
-    "书包夹层、桌洞、课本、桌底，全找过了，还是没有。时间一点点过去。"
+    scene chapter1 b_search_desk with dissolve
+    "书包夹层、桌洞、课本，都找过了。"
+    scene chapter1 b_search_floor with dissolve
+    "桌底也看了，还是没有。时间一点点过去。"
+    scene chapter1 b_search_worried with dissolve
     p "你该不会落宿舍了吧？"
     b "应该不会……"
     p "等等，你外套找过没？"
     b "外套？"
     scene chapter1 b_pocket with dissolve
-    "齐文昌摸了摸搭在椅背上的外套侧兜，动作突然停住。他慢慢掏出一张校卡。"
+    "齐文昌摸了摸搭在椅背上的外套侧兜，动作突然停住。"
+    scene chapter1 b_card_reveal with dissolve
+    "他慢慢掏出一张校卡。"
+    scene chapter1 b_card_held with dissolve
     p "……"
     b "……"
     p "找到了？"
+    scene chapter1 b_card_apology with dissolve
     b "……嗯。对不起。"
     p "哈哈，合着一直在你椅子上。"
     b "真的忘了。"
     p "下次先摸口袋。走吧，食堂估计吃不上了。"
-    b "……去中餐厅吧。我请你。"
-    p "AA 就行。"
-    b "好。"
+    b "要不去西餐厅吧。"
+    p "好啊，那走吧。"
     scene chapter1 b_restaurant with fade
-    "我们在校内中餐厅找了个靠窗的位置。等菜时，我注意到齐文昌书包上的苦力怕挂件。"
+    "我们在西餐厅找了个靠窗的位置。等菜时，我注意到齐文昌书包上的苦力怕挂件。"
     p "诶，我看到你的挂件，你也玩 Minecraft吗？"
     b "你也玩？"
     p "对啊，玩了好几年了。"

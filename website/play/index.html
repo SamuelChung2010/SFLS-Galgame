@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#152d2e">
+  <title>在线试玩｜SFLS ~Dear Moments~</title>
+  <meta name="description" content="在浏览器里体验《SFLS～我挚爱的时光～》第一章 Demo。支持触屏操作，建议横屏游玩。">
+  <link rel="canonical" href="https://sflsgal.top/play/">
+  <link rel="icon" type="image/png" sizes="256x256" href="../assets/favicon.png?v=club-1">
+  <link rel="stylesheet" href="player.css?v=1">
+  <script src="player.js?v=1" defer></script>
+</head>
+<body>
+  <header class="player-header">
+    <a href="../" class="back-link" aria-label="返回官网">← <span>返回官网</span></a>
+    <span class="player-title">SFLS <span lang="en">~Dear Moments~</span></span>
+    <div class="player-tools"><button id="help-button" aria-haspopup="dialog">游玩帮助</button><button id="fullscreen-button" hidden>全屏</button></div>
+  </header>
+  <main id="player-shell">
+    <div class="launch-screen" id="launch-screen">
+      <div class="launch-card">
+        <p class="eyebrow">CHAPTER 01 / 浏览器体验版</p>
+        <h1>第一章的故事，<br><em>在这里开始。</em></h1>
+        <p class="intro">SFLS ～我挚爱的时光～<br><span lang="en">Dear Moments</span></p>
+        <button id="start-button" class="start-button">开始在线试玩 <span aria-hidden="true">↗</span></button>
+        <p class="launch-note">首次进入需要加载游戏资源，请保持网络连接。<br>手机和平板建议横屏，点击画面推进剧情。</p>
+        <a class="download-link" href="../#download">也可以下载电脑端 Demo ↓</a>
+      </div>
+    </div>
+    <iframe id="game-frame" title="SFLS Dear Moments 第一章 Demo" data-src="game/" allow="autoplay; fullscreen" allowfullscreen hidden></iframe>
+    <noscript><p class="no-script">在线试玩需要启用 JavaScript。<a href="../#download">前往下载电脑端 Demo</a></p></noscript>
+  </main>
+  <aside class="rotate-hint" aria-label="横屏提示"><span aria-hidden="true">↻</span> 横屏时，文字和操作会更清楚。</aside>
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <button id="close-help" class="close-help" aria-label="关闭帮助">×</button>
+    <p class="eyebrow">HOW TO PLAY</p><h2 id="help-title">慢慢读，随时保存。</h2>
+    <ul>
+      <li>点击游戏画面推进对话，点击选项作出选择。电脑也可使用空格或回车。</li>
+      <li>手机、iPhone 和 iPad 建议横屏游玩。全屏功能是否可用取决于浏览器。</li>
+      <li>通过游戏下方的“保存 / 读取”管理进度。存档保存在当前浏览器与设备中，清除网站数据或使用无痕模式可能丢失进度。</li>
+      <li>需要换设备时，可使用游戏左上角菜单的存档导入 / 导出。退出前请先保存。</li>
+      <li>没有声音时，先点击游戏画面，并检查设备音量、静音状态和游戏设置。加载较慢时，请稍候或切换网络。</li>
+    </ul>
+    <p class="help-note">网页体验版仍需持续适配。遇到兼容问题，可选择电脑端下载，并通过 <a href="https://github.com/SamuelChung2010/SFLS-Galgame/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> 反馈设备和浏览器版本。</p>
+    <a class="download-link" href="game/">直接打开游戏页面 ↗</a>
+  </dialog>
+</body>
+</html>

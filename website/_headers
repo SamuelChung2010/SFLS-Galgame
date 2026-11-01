@@ -1,0 +1,14 @@
+/play/
+  Cache-Control: no-cache
+
+/play/*.css
+  Cache-Control: no-cache
+
+/play/*.js
+  Cache-Control: no-cache
+
+/play/game/*
+  Cache-Control: no-cache
+
+/play/game/*.wasm
+  Content-Type: application/wasm

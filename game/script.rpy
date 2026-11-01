@@ -1,5 +1,4 @@
 # 第一章 demo：角色、可存档状态与完整流程。
-define e = Character("艾琳")
 define p = Character("我", color="#8DD5FF")
 define a = Character("倒霉熊", color="#FFE680")
 define b = Character("齐文昌", color="#B5D8EC")
@@ -32,6 +31,6 @@ label start:
     $ chapter1_demo_completed = True
     $ quick_menu = False
     window hide
-    play music "audio/bgm/Title Bgm.ogg" fadein 1.0 volume 0.6
+    play music "audio/bgm/OP music.flac" fadein 1.0 volume 0.6
     call screen chapter1_demo_end
     return

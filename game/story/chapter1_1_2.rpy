@@ -50,6 +50,7 @@ label chapter1_1_2:
     "靠窗第二排……应该就是这里。"
     "我把书包暂时放在旁边的空座位上。过了一会儿，一个男生走了过来。"
     b "不好意思，这里是我的位置。"
+    scene chapter1 b_enter_near with dissolve
     p "哦，你就是我同桌吧？"
     "我也报了自己的名字。"
     b "我叫齐文昌。"
@@ -62,6 +63,7 @@ label chapter1_1_2:
     p "你之前也是深外初中部的吗？"
     b "不是，从别的学校考进来的。"
     p "这样啊，感觉学校还挺大的。"
+    scene chapter1 b_side with dissolve
     b "……确实。"
     "他的话不多，但每次都会认真回答，似乎不太擅长主动找话题。"
     scene chapter1 b_pen_reach with dissolve

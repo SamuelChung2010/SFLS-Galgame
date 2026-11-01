@@ -24,3 +24,8 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+# Generated RenPy Web runtime and build artifacts.
+/website/play/game/
+/website/play/game.zip
+/web-build/

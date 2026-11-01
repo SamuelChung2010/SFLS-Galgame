@@ -1,0 +1,6 @@
+# Dear Moments Web: keep menus ready; load scenes and music on demand.
+- image game/gui/**
++ image game/pictures/**
++ image game/**
++ music game/audio/**
++ voice game/voice/**

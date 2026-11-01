@@ -10,7 +10,7 @@ label chapter1_2_2:
     "早上还担心同学关系，结果同桌齐文昌只是话少，并不是不好相处。中午食堂的人倒是真的多，放学后又被小邓拉着逛了一趟校园。"
     "不知道王力豪和李哥在干什么，他们应该先回宿舍了？"
     "想到这里，脚步不自觉快了一些。"
-    play music "audio/bgm/焉知晴雨.mp3" fadeout 1.0 fadein 1.5 volume 0.6
+    play music "audio/bgm/happy background music by Wu.ogg" fadeout 1.0 fadein 1.5 volume 0.6
     scene chapter1 night_f with fade
     "晚上回到宿舍，我刚把书包放下，就听见王力豪在一本正经地宣布。李哥在旁边整理东西，头也不抬一下。"
     scene chapter1 night_e with dissolve

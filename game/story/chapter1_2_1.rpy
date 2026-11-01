@@ -37,7 +37,7 @@ label chapter1_2_1:
     "我们说好碰头的位置，便各自回班上课。"
     scene chapter1 class_route with fade
     "傍晚吃过饭，我按约来到连廊。小邓已经等在那里，见到我便收起地图，领着我往2栋走。"
-    play music "audio/bgm/薄雾弥时.mp3" fadeout 1.0 fadein 1.5 volume 0.6
+    play music "audio/bgm/a quiet and maybe mysterious background music by Wu.ogg" fadeout 1.0 fadein 1.5 volume 0.6
     scene chapter1 oldbuilding with fade
     "我们来到 2 栋。相比其他教学楼，这里显得安静许多。"
     d "就这儿了，今天的寻宝地点。"

@@ -3,7 +3,7 @@
 label chapter1_2_3:
 
     scene chapter1 field_entry with fade
-    play music "audio/bgm/Background music(1).ogg" fadein 1.0 volume 0.6
+    play music "audio/bgm/a b.ogg" fadein 1.0 volume 0.6
     "第二天晚饭后，离晚自习还有一段时间。"
     scene chapter1 track_approach with dissolve
     "我暂时没有什么事情，便一个人在操场上散步。"

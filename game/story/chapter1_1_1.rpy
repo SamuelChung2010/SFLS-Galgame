@@ -3,7 +3,7 @@
 label chapter1_1_1:
 
     scene chapter1 arrival_walkway with fade
-    play music "audio/bgm/焉知晴雨.mp3" fadein 1.5 volume 0.6
+    play music "audio/bgm/School Song (43 time signature)-by Wang.ogg" fadein 1.5 volume 0.6
     "以前听人说‘等你上了高中’，总觉得还早。"
     "现在连住校的行李都带来了，倒还有点不习惯。"
     "新的班级，新的舍友……也不知道大家好不好相处。"
@@ -22,16 +22,17 @@ label chapter1_1_1:
     p "那谢啦，下次我请你。"
     a "行。你住这间吧？我一会给你送过来，我就在隔壁。"
     "我点点头，等呼吸缓下来，才把箱子拖进寝室。"
+    play music "audio/bgm/happy background music by Wu.ogg" fadeout 1.0 fadein 1.5 volume 0.6
     scene chapter1 dorm_f with fade
     "房间里已经有两个人。我还没见过他们，一时不知道该先打招呼，还是先把卡在门口的箱子挪开。"
     scene chapter1 dorm_e with dissolve
     roommate_e "来啦？先进去，门口这袋是我的，我挪一下。"
     "他把袋子拎到床边，给我让出一条路。"
-    scene chapter1 dorm_e with dissolve
+    scene chapter1 dorm_e_folded with dissolve
     roommate_e "我叫王力豪，那边那个，我们都叫他李哥。你怎么称呼？"
     "我也报了自己的名字。"
     p "今天才搬进来，以后多关照。"
-    scene chapter1 dorm_f_think with dissolve
+    scene chapter1 dorm_f_folded with dissolve
     roommate_f "你好。你的床在这边，床头贴着名字。"
     p "好，谢谢。你们都收拾完了？"
     scene chapter1 dorm_e_folded with dissolve
@@ -70,7 +71,7 @@ label chapter1_1_1:
             scene chapter1 dorm_e_folded with dissolve
             p "我一会跟隔壁的倒霉熊过去，你们不用等我。"
             roommate_e "行，那我们先走了。"
-            scene chapter1 dorm_f_think with dissolve
+            scene chapter1 dorm_f_pondering with dissolve
             roommate_f "走的时候带上钥匙，别落屋里。"
             p "好，谢了。"
             "铺好床，我把钥匙装进口袋，去隔壁敲了敲门。"
