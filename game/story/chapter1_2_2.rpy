@@ -35,9 +35,39 @@ label chapter1_2_2:
     roommate_e "要提个桶过去，还要刷校卡。"
     scene chapter1 night_f_smile with dissolve
     roommate_f "厉害，下一步准备研究阳台门吗？"
-    p "你说要提升生活水平，先把你值日轮流表排满咋样？"
-    scene chapter1 night_e_point with dissolve
-    roommate_e "那怎么行，当然是从最重要的地方开始。今晚，我请大家喝“补水啦”！"
+    menu:
+        "格局打开，寝室确实需要一位战略家。":
+            p "我站王力豪这边。干大事的人都在统筹全局，哪有空管区区一双袜子？"
+            scene chapter1 night_e_point with dissolve
+            roommate_e "听听！什么叫知音！终于有人懂我的大局观了！"
+            scene chapter1 night_f_think with dissolve
+            roommate_f "懂了，那今天的值日你们俩战略家一起统筹一下？"
+            scene chapter1 night_e with dissolve
+            roommate_e "咳……战略家只负责画蓝图，落地执行得靠团队协作。"
+            scene chapter1 night_f_smile with dissolve
+            roommate_f "果然。"
+            scene chapter1 night_e_point with dissolve
+            roommate_e "算了算了，不说这些扫兴的。难得遇上知音，今晚我请大家喝“补水啦”！"
+            $ e_affection += 1
+        "我站李哥这边，先把值日做好。":
+            p "我站李哥这边。你说要提升生活水平，先把值日做好咋样？顺便把阳台那几双袜子从“生态系统”里移除。"
+            roommate_f "终于来个正常人了。"
+            scene chapter1 night_e with dissolve
+            roommate_e "喂！你怎么刚来第一天就帮他说话？！那不是袜子，那是青春挥洒过的痕迹！"
+            scene chapter1 night_f_think with dissolve
+            roommate_f "那你把你的青春挪回盆里泡着，别晾在阳台扶手底下发芽。"
+            scene chapter1 night_e_point with dissolve
+            roommate_e "为了挽回我的声誉，今晚我请大家喝“补水啦”！"
+            $ f_affection += 1
+        "一个管精神文明，一个管物质文明。":
+            p "别吵了。王力豪负责寝室的精神文明建设，李哥负责物质文明和卫生监督。两手都要抓，怎么样？"
+            scene chapter1 night_f_think with dissolve
+            roommate_f "听起来像我一个人干所有活，他负责在旁边鼓掌。"
+            scene chapter1 night_e with dissolve
+            roommate_e "诶，话不能这么说，鼓掌也是很消耗情绪价值的。我看这个分工就很科学！"
+            p "那作为精神文明总设计师，你总得先表示点什么吧？"
+            scene chapter1 night_e_point with dissolve
+            roommate_e "为了庆祝咱们寝室正式确立领导班子，今晚我请大家喝“补水啦”！"
     "！？"
     scene chapter1 night_f_smile with dissolve
     roommate_f "你不是说“请”吗？怎么把我那瓶拿走了？"
@@ -73,8 +103,27 @@ label chapter1_2_2:
     roommate_e "那更得抓紧了!!!"
     scene chapter1 night_f_think with dissolve
     roommate_f "睡觉。"
-    p "睡觉。"
-    scene black with fade
-    "王力豪关上台灯，可能还在嘟囔什么，但我的睡意压过了好奇心。"
+    menu:
+        "睡觉！再不睡明天得靠“补水啦”续命了。":
+            p "睡觉。再不睡，明天早读真得靠“补水啦”续命了。"
+            scene black with fade
+            "王力豪关上台灯，可能还在嘟囔什么，但我的睡意压过了好奇心。"
+        "第一议题：明早六点半谁把你从床上撬起来？":
+            p "行，夜谈会第一议题：明天早上六点半，谁负责把你从床上撬起来？"
+            roommate_f "附议。第二议题：阳台袜子什么时候收。"
+            scene chapter1 night_e with dissolve
+            roommate_e "……"
+            roommate_e "我突然觉得睡眠质量也很重要，明天再议，晚安。"
+            scene black with fade
+            "啪嗒一声，王力豪火速关上了台灯。看来“袜子”才是终极封印术。"
+        "不如摸黑预习一下高中数学？":
+            p "既然都要抓紧时间，不如把发的新书拿出来，摸黑预习一下明天的数学？"
+            "寝室陷入了长达三秒的死寂。"
+            scene chapter1 night_e with dissolve
+            roommate_e "……兄弟，你比我还狠。"
+            scene chapter1 night_f_think with dissolve
+            roommate_f "……我也支持现在立刻睡觉。"
+            scene black with fade
+            "王力豪默默关上了台灯，动作快得像怕我真掏出课本。"
 
     return

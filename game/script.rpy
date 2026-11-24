@@ -17,6 +17,7 @@ default a_affection = 0
 default b_affection = 0
 default d_affection = 0
 default e_affection = 0
+default f_affection = 0
 default g_affection = 0
 default chapter1_demo_completed = False
 
